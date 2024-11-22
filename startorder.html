@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeon Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="startstyle.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        .btn-group-vertical .btn {
+            border: none; 
+        }
+        .btn-group-vertical .btn:hover {
+            border: none; /* Ensure no border on hover */
+        }
+        .btn-group-vertical .btn {
+            border: none; 
+        }
+        .btn-group-vertical .btn:hover {
+            border: none; /* Ensure no border on hover */
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="Images/cafeon-logo 2.png" alt="Cafeon Logo" style="width: 50px;">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Deals</a>
+            </li>
+        </ul>
+        <div>
+            <span id="cartTotal">₹0.00</span>
+            <a href="cart.html">
+            <img src="images/Cart.png" alt="Cart" style="width: 30px;">
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="bg-dark text-white text-center py-2">
+        Deliver To? <button class="btn btn-danger">Use My Location</button>
+    </div>
+
+ 
+    <div class="container mt-4">
+        <h2 class="font-weight-bold">Cafeon Menu</h2>
+        <div class="row">
+          
+            <div class="col-md-3">
+                <div class="btn-group-vertical w-100" role="group">
+                    <button type="button" class="btn btn-outline-dark mb-2 menu-btn" data-target="expressoSection">Expresso</button>
+                    <button type="button" class="btn btn-outline-dark mb-2 menu-btn" data-target="sandwichesSection">Sandwiches</button>
+                    <button type="button" class="btn btn-outline-dark mb-2 menu-btn" data-target="puffsSection">Puffs & Pies</button>
+                    <button type="button" class="btn btn-outline-dark mb-2 menu-btn" data-target="juicesSection">Juices</button>
+                    <button type="button" class="btn btn-outline-dark mb-2 menu-btn" data-target="energyDrinksSection">Energy Drinks</button>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div class="col-md-9">
+                <!-- Expresso Section -->
+                <div class="menu-section" id="expressoSection">
+                    <h3 class="font-weight-bold">Expresso</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Iced Stardust Macchiato.png" class="card-img-top" alt="Iced Stardust Macchiato">
+                                <div class="card-body">
+                                    <h5 class="card-title">Iced Stardust Macchiato</h5>
+                                    <p class="card-text">₹ 456.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="456.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Caramel Macchiato.png" class="card-img-top" alt="Caramel Macchiato">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caramel Macchiato</h5>
+                                    <p class="card-text">₹ 356.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="356.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Cappucino.png" class="card-img-top" alt="Cappuccino">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cappuccino</h5>
+                                    <p class="card-text">₹ 432.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="432.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Caffe latte.png" class="card-img-top" alt="Caffe Latte">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caffe Latte</h5>
+                                    <p class="card-text">₹ 432.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="432.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Caffe Americano.png" class="card-img-top" alt="Caffe Americano">
+                                <div class="card-body">
+                                    <h5 class="card-title">Caffe Americano</h5>
+                                    <p class="card-text">₹ 432.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="432.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Stardust Macchiato.png" class="card-img-top" alt="Stardust Macchiato">
+                                <div class="card-body">
+                                    <h5 class="card-title">Stardust Macchiato</h5>
+                                    <p class="card-text">₹ 432.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="432.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sandwiches Section -->
+                <div class="menu-section" id="sandwichesSection" style="display: none;">
+                    <h3 class="font-weight-bold">Sandwiches</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Mushroom Cheese Sandwich.png" class="card-img-top" alt="Mushroom Cheese Sandwich">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mushroom Cheese Sandwich</h5>
+                                    <p class="card-text">₹ 150.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="150.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Mozarella Cheese Sandwich.png" class="card-img-top" alt="Mozarella Cheese Sandwich">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mozarella Cheese Sandwich</h5>
+                                    <p class="card-text">₹ 120.50</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="120.50">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Tandoori Wrap.png" class="card-img-top" alt="Tandoori Wrap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tandoori Wrap</h5>
+                                    <p class="card-text">₹ 180.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="180.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/BBQ Chicken Wrap.png" class="card-img-top" alt="BBQ Chicken Wrap">
+                                <div class="card-body">
+                                    <h5 class="card-title">BBQ Chicken Wrap</h5>
+                                    <p class="card-text">₹ 210.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="210.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Sourdough Sandwich.png" class="card-img-top" alt="Sourdough Sandwich">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sourdough Sandwich</h5>
+                                    <p class="card-text">₹ 170.25</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="170.25">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Chicken Baugette Sandwich.png" class="card-img-top" alt="Chicken Baugette Sandwich">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chicken Baugette Sandwich</h5>
+                                    <p class="card-text">₹ 130.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="130.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puffs & Pies Section -->
+                <div class="menu-section" id="puffsSection" style="display: none;">
+                    <h3 class="font-weight-bold">Puffs & Pies</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Bhuna Chicken Puff.png" class="card-img-top" alt="Bhuna Chicken Puff">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bhuna Chicken Puff</h5>
+                                    <p class="card-text">₹ 85.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="85.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Chilli Chicken Muffin.png" class="card-img-top" alt="Chilli Chicken Muffin">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chilli Chicken Muffin</h5>
+                                    <p class="card-text">₹ 75.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="75.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juices Section -->
+                <div class="menu-section" id="juicesSection" style="display: none;">
+                    <h3 class="font-weight-bold">Juices</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Glowberry.png" class="card-img-top" alt="Glowberry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Glowberry</h5>
+                                    <p class="card-text">₹ 120.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="120.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Blue Berry.png" class="card-img-top" alt="Blue Berry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blue Berry</h5>
+                                    <p class="card-text">₹ 140.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="140.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/StrawBerry Banana.png" class="card-img-top" alt="StrawBerry Banana">
+                                <div class="card-body">
+                                    <h5 class="card-title">StrawBerry Banana</h5>
+                                    <p class="card-text">₹ 130.50</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="130.50">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Cherry Freeze.png" class="card-img-top" alt="Cherry Freeze">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cherry Freeze</h5>
+                                    <p class="card-text">₹ 110.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="110.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Ice Pop.png" class="card-img-top" alt="ice pop">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ice Pop</h5>
+                                    <p class="card-text">₹ 150.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="150.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Meta Moon.png" class="card-img-top" alt="Meta Moon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Meta Moon</h5>
+                                    <p class="card-text">₹ 145.25</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="145.25">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Drinks Section -->
+                <div class="menu-section" id="energyDrinksSection" style="display: none;">
+                    <h3 class="font-weight-bold">Energy Drinks</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Dream Pop.png" class="card-img-top" alt="DreamPop">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dream Pop</h5>
+                                    <p class="card-text">₹ 250.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="250.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Original.png" class="card-img-top" alt="Original">
+                                <div class="card-body">
+                                    <h5 class="card-title">Original</h5>
+                                    <p class="card-text">₹ 200.50</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="200.50">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Icepop.png" class="card-img-top" alt="Ice Pop">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ice Pop</h5>
+                                    <p class="card-text">₹ 180.25</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="180.25">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Strawberry Melon.png" class="card-img-top" alt="StrawberryWatermelon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Strawberry Watermelon</h5>
+                                    <p class="card-text">₹ 220.00</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="220.00">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/Blue Rasberry.png" class="card-img-top" alt="BlueRaspberry">
+                                <div class="card-body">
+                                    <h5 class="card-title">Blue Raspberry</h5>
+                                    <p class="card-text">₹ 190.75</p>
+                                    <button class="btn btn-danger add-to-cart" data-price="190.75">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        var cartItems = []; // Array to store added items
+
+        $(".menu-btn").click(function(){
+            var target = $(this).data("target");
+            $(".menu-section").slideUp(); // Hide all sections
+            $("#" + target).slideDown(); // Show the clicked section
+        });
+
+        $(".add-to-cart").click(function(){
+            var price = $(this).data("price");
+            var itemName = $(this).siblings(".card-title").text(); // Get item name
+            if (!isNaN(price) && price !== null) {
+                var currentTotal = parseFloat($("#cartTotal").text().replace("₹", "").replace(",", ""));
+                var newTotal = currentTotal + parseFloat(price);
+                $("#cartTotal").text("₹" + newTotal.toFixed(2));
+
+                // Add item to cart array
+                cartItems.push({ name: itemName, price: price });
+                localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Store cart items in localStorage
+            } else {
+                console.error("Invalid price: ", price);
+            }
+        });
+    });
+</script>
+
+    
+
+</body>
+</html>

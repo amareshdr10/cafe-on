@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeon Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="cart.css">
+    <style>
+        .cart-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .cart-item img {
+            width: 100px; /* Set a fixed width for the product images */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/cafeon-logo 2.png" alt="Cafeon Logo" style="width: 50px;">
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+    </ul>
+    <div>
+        <span id="cartTotal">₹0.00</span>
+        <a href="cart.html">
+            <img src="images/Cart.png" alt="Cart" style="width: 30px;">
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <h2 class="font-weight-bold">Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="total" id="totalCost">Total: ₹0.00</div>
+    <button class="btn btn-danger mt-3" id="paymentButton">Proceed to Payment</button>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Get cart items from localStorage
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var total = 0;
+
+    // Display cart items
+    cartItems.forEach(function(item) {
+        var itemHtml = `
+            <div class="cart-item">
+                <img src="${item.images}" alt="${item.name}">
+                <div>
+                    <h5>${item.name}</h5>
+                    <p>Price: ₹${item.price}</p>
+                </div>
+            </div>
+        `;
+        $("#cartItems").append(itemHtml);
+        total += parseFloat(item.price);
+    });
+
+    // Update total cost display
+    $("#totalCost").text("Total: ₹" + total.toFixed(2));
+
+    // Handle payment button click
+    $("#paymentButton").click(function() {
+        // Redirect to payment page (change 'payment.html' to your actual payment page)
+        window.location.href = "payment.html";
+    });
+});
+</script>
+
+</body>
+</html>

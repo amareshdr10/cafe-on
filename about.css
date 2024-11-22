@@ -1,0 +1,9 @@
+.navbar-nav {
+    margin-right: 50px; /* Adds space between the navbar links and the Signup/Login buttons */
+}
+
+
+.navbar ul{
+    margin-left: 150px;
+    gap:40px
+}

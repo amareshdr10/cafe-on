@@ -1,0 +1,92 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styling */
+.navbar-brand img {
+    max-width: 300px;
+
+}
+.navbar 
+
+.navbar-text {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.navbar ul{
+    margin-left: 550px;
+    gap: 100px;
+    
+}
+.navbar ul li{
+    color: #bb0000;
+
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgb(0, 0, 0);
+}
+
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+/* Delivery div styling */
+.bg-black {
+    background-color: #000;
+}
+
+#use-location-btn {
+    font-size: 1rem;
+    padding: 5px 15px;
+  
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.add-to-cart {
+    font-size: 1rem;
+}
+
+/* Sidebar styling */
+.list-group-item {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+.menu-section {
+    display: none;
+}
+.menu-section:first-child {
+    display: block; /* Only the first section (Expresso) is visible by default */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
